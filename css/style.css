@@ -1,39 +1,4 @@
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0D0D0D;
-}
-
-.container{    
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: left;
-}
-
-#sobre, #habilidades, #experiencia, #contato{
-    color: #CCF244;    
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 89px;
-    text-align: center;
-    border-bottom: 2px solid #0D0D0D;
-}
-
-#sobre{
-    border-top: 2px solid #0D0D0D;    
-}
-
-#habilidades{ 
-    
-}
-
-#experiencia{
-    
-}
-
-#contato{
-    
+#Ola{
+    color: blueviolet;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
