@@ -1,5 +1,3 @@
-<h1>O que é o GIT?</h1>
-<p>GIT é um sistema de controle de versões distribuido, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo. Alguns livros digitais são mantidos no <a href="https://github.com/">Github</a> e escrito ou traduzidos aos poucos pelo autor ou comunidade.</p>
 
 <h1>
     Adicionar chave SSH ao Github
