@@ -1,0 +1,50 @@
+@import url("./reset.css");
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #f5f5f0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.header-container {
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.title a {
+  color: black;
+	text-decoration: none;
+}
+
+.title a:hover{
+	color: blue;
+}
+
+.nav {
+  display: flex;
+  font-size: 1.0em;
+  font-weight: 600;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+	color: black;
+}
+
+.nav a:hover {
+	color: blue;
+	cursor: pointer;
+}
