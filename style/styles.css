@@ -96,4 +96,8 @@ summary {
   summary {
     font-size: 14px;
   }
+
+  .mini-title {
+    margin-right: 10px;
+  }
 }
