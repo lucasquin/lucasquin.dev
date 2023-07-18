@@ -41,3 +41,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+    scroll-behavior: smooth;
+scroll-padding-top: 100px; /* Adicione um espaçamento para evitar que o conteúdo seja ocultado pelo cabeçalho fixo */
+  scroll-padding-bottom: 100px; /* Adicione um espaçamento para evitar que o conteúdo seja ocultado pelo rodapé fixo */
+  scroll-snap-type: y mandatory;
+}
