@@ -1,10 +1,11 @@
 import ImageZoom from "./components/ImageZoom/";
 import brazil from "./assets/images/brazil.jpg";
+import Marquee from "./components/Marquee";
 
 function App() {
   return (
     <div>
-      <ImageZoom imagePath={brazil} imageDescription="City of Rio de Janeiro"/>
+      <Marquee text="LUCAS"/>
     </div>
   );
 }
