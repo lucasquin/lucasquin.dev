@@ -1,11 +1,10 @@
-import "./App.css";
-import BackgroundImageZoom from "./components/BackgroundImageZoom/BackgroundImageZoom";
+import ImageZoom from "./components/ImageZoom/";
 import brazil from "./assets/images/brazil.jpg";
 
 function App() {
   return (
     <div>
-      <BackgroundImageZoom imagePath={brazil} imageDescription="City of Rio de Janeiro"/>
+      <ImageZoom imagePath={brazil} imageDescription="City of Rio de Janeiro"/>
     </div>
   );
 }
