@@ -1,30 +1,33 @@
 import React, { useState, useEffect } from "react";
-import "./index.css";
 
-function Marquee({ text }) {
-    const [position, setPosition] = useState(0);
+function Marquee({ text, textColor, fontSize, fontWeight }) {
+  const screenWidth = window.innerWidth;
+  const textWidth = text.length;
+  const textStartPosition = -textWidth * fontSize;
+  const [position, setPosition] = useState(textStartPosition);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setPosition((position) => position + 15);
-        }, 100);
-        return () => clearInterval(interval);
-    });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newPosition = position + 5;
+      setPosition((position) => {
+        return newPosition > screenWidth + textWidth
+          ? textStartPosition
+          : newPosition;
+      });
+    }, 30);
+    return () => clearInterval(interval);
+  });
 
-    return (
-        <div className="container">
-            <div
-                style={{
-                    position: "absolute",
-                    left: `${position}px`,
-                    whiteSpace: "nowrap",
-                    color: "black"
-                }}
-            >
-                {text}
-            </div>
-        </div>
-    );
+  const style = {
+    position: "absolute",
+    left: `${position}px`,
+    whiteSpace: "nowrap",
+    color: `${textColor}`,
+    fontWeight: fontWeight,
+    fontSize: fontSize,
+  };
+
+  return <p style={style}>{text}</p>;
 }
 
 export default Marquee;

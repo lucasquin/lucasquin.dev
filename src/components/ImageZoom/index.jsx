@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 
 function ImageZoom({ imagePath, imageDescription }) {
-  const [scale, setScale] = useState();
+  const [scale, setScale] = useState(1);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -19,14 +19,15 @@ function ImageZoom({ imagePath, imageDescription }) {
   });
 
   return (
-    <div className="container">
-      <img
-        className="image"
-        src={imagePath}
-        alt={imageDescription}
-        style={{ transform: `scale(${scale})` }}
-      />
-    </div>
+    <div
+      style={{
+        backgroundImage: `url(${imagePath})`,
+        backgroundSize: `${scale * 100}%`,
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        height: "100vh",
+      }}
+    ></div>
   );
 }
 
