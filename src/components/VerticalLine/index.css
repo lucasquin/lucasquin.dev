@@ -1,0 +1,8 @@
+@import "../../styles/variables.css";
+
+.container hr {
+    border-color: var(--unselected);
+    border-width: 2px;
+    border-style: solid;
+    margin: 10px 0;
+}

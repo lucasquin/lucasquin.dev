@@ -1,0 +1,17 @@
+:root {
+  /*Colors:*/
+  --green: #50fa7b;
+  --violet: #bd93f9;
+  --cyan: #8be9fd;
+  --pink: #ff79c6;
+  --background: #282a36;
+  --unselected: #44475a;
+  --unselected2: #6272a4;
+
+  /*Text*/
+  --size1: 40px;
+  --size2: 36px;
+  --size3: 30px;
+  --size4: 24px;
+  --size5: 16px;
+}
