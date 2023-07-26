@@ -1,18 +1,22 @@
 import VerticalLine from "../VerticalLine";
+import { useTranslation } from "react-i18next";
 import "./index.css";
 
 const ListArticles = () => {
+  const { t } = useTranslation();
   return (
     <div className="cssListArticles">
       <section>
-        <h3>Articles</h3>
+        <h3>{t("Articles")}</h3>
         <VerticalLine></VerticalLine>
+
         <span>
-          <time datetime="11/06/2023">11/06/2023</time>:{" "}
+          <time datetime="11/06/2023">{t("2023/06/11")}</time>:{" "}
           <b>
-            <a href="">Enfrentando dias de chuva e descobrindo dias de sol</a>
+            <a href="">{t("Facing the rainy days and discovering the sunny days")}</a>
           </b>
         </span>
+
       </section>
     </div>
   );

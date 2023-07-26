@@ -1,8 +1,12 @@
 {
-    "header": {
+    "translation": {
         "Home": "Inicio",
         "About": "Sobre",
         "Contact": "Contato",
-        "Projects": "Projetos"
+        "Projects": "Projetos",
+
+        "Articles": "Artigos",
+        "Facing the rainy days and discovering the sunny days": "Enfrentando os dias de chuva e descobrindo os dias de sol",
+        "2023/06/11": "11/06/2023"
     }
 }
