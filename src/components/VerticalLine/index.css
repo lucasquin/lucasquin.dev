@@ -1,6 +1,6 @@
 @import "../../styles/variables.css";
 
-.container hr {
+.cssVerticalLine {
     border-color: var(--unselected);
     border-width: 2px;
     border-style: solid;

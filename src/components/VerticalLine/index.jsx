@@ -1,7 +1,7 @@
 import "./index.css";
 
 const VerticalLine = () => {
-    return <hr />;
+  return <hr className="cssVerticalLine" />;
 };
 
 export default VerticalLine;

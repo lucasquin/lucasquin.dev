@@ -5,7 +5,7 @@ import "./index.css";
 const Header = () => {
     const { t } = useTranslation();
     return (
-        <div className="container">
+        <div className="cssHeader">
             <header>
                 <h1>LUCASQUIN'S WEBSITE</h1>
                 <VerticalLine></VerticalLine>

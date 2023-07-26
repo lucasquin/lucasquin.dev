@@ -6,12 +6,13 @@
   --pink: #ff79c6;
   --background: #282a36;
   --unselected: #44475a;
-  --unselected2: #6272a4;
+  --link: #6272a4;
+  --white: #ffffff;
 
-  /*Text*/
-  --size1: 40px;
+  /*Text*/ --size1: 40px;
   --size2: 36px;
   --size3: 30px;
   --size4: 24px;
-  --size5: 16px;
+  --size5: 20px;
+  --size6: 16px;
 }
