@@ -22,7 +22,8 @@
   justify-content: space-between;
 }
 
-.cssHeader header nav ul li {
+.cssHeader header nav ul li a {
   font-size: var(--size3);
   color: var(--unselected);
+  text-decoration: none;
 }

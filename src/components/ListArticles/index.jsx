@@ -11,7 +11,7 @@ const ListArticles = () => {
         <VerticalLine></VerticalLine>
 
         <span>
-          <time datetime="11/06/2023">{t("2023/06/11")}</time>:{" "}
+          <time dateTime="11/06/2023">{t("2023/06/11")}</time>:{" "}
           <b>
             <a href="">{t("Facing the rainy days and discovering the sunny days")}</a>
           </b>
