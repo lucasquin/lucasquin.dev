@@ -41,6 +41,7 @@ const Header = () => {
                   color: "var(--unselected)",
                 }
           }
+    className="transition"
         >
           <b>LUCASQUIN'S WEBSITE</b>
         </h1>

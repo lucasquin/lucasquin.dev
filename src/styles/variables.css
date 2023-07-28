@@ -9,10 +9,40 @@
   --link: #6272a4;
   --white: #ffffff;
 
-  /*Text*/ --size1: 40px;
-  --size2: 36px;
-  --size3: 30px;
-  --size4: 24px;
-  --size5: 20px;
-  --size6: 16px;
+  /*Text*/
+  --size1: 2.2rem;
+  --size2: 1.7rem;
+  --size3: 1.4rem;
+  --size4: 1.1rem;
+  --size5: 0.8rem;
+}
+
+@media screen and (min-width: 2560px) {
+  :root {
+    --size1: 2.8rem;
+    --size2: 2.3rem;
+    --size3: 2rem;
+    --size4: 1.7rem;
+    --size5: 1.3rem;
+  }
+}
+
+@media (max-width: 699px) {
+  :root {
+    --size1: 1.6rem;
+    --size2: 1.3rem;
+    --size3: 1rem;
+    --size4: 0.7rem;
+    --size5: 0.4rem;
+  }
+}
+
+@media (max-width: 359px) {
+  :root {
+    --size1: 1.3rem;
+    --size2: 1rem;
+    --size3: 0.8rem;
+    --size4: 0.5rem;
+    --size5: 0.2rem;
+  }
 }

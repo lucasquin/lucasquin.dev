@@ -3,24 +3,23 @@
 .cssListArticles {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 3rem;
 }
 
 .cssListArticles section {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
 .cssListArticles section h3 {
   font-weight: 600;
-  font-size: var(--size4);
+  font-size: var(--size3);
   color: var(--green);
 }
 
 .cssListArticles section span {
   font-weight: 400;
-  font-size: var(--size5);
+  font-size: var(--size4);
   color: var(--white);
 }
 

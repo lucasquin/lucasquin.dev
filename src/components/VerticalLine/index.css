@@ -1,8 +1,15 @@
 @import "../../styles/variables.css";
 
 .cssVerticalLine {
-    border-color: var(--unselected);
-    border-width: 2px;
-    border-style: solid;
-    margin: 10px 0;
+  border-color: var(--unselected);
+  border-width: 0.15rem;
+  border-style: solid;
+  margin: 0.7rem 0;
+}
+
+@media (max-width: 359px) {
+  .cssVerticalLine {
+    border-width: 0.1rem;
+    margin: 0.5rem 0;
+  }
 }

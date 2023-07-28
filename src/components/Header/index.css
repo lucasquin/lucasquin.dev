@@ -7,13 +7,12 @@
 }
 
 .cssHeader header {
-  margin-top: 50px;
+  margin-top: 3rem;
 }
 
 .cssHeader header h1 {
   font-weight: 600;
   font-size: var(--size1);
-  color: var(--green);
 }
 
 .cssHeader header nav ul {
@@ -23,7 +22,6 @@
 }
 
 .cssHeader header nav ul li a {
-  font-size: var(--size3);
-  color: var(--unselected);
+  font-size: var(--size2);
   text-decoration: none;
 }

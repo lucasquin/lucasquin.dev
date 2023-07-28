@@ -2,7 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 @import "./variables.css";
 
-body {
+html {
   background: var(--background);
   font-family: "Inter", sans-serif;
+}
+
+* {
+  transition: font-size .03s ease;
+}
+
+body {
+  padding: 1rem
 }
