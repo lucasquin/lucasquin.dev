@@ -15,11 +15,22 @@ root.render(
     <Router>
       <Header></Header>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/projects" element={<Projects />} />
-        <Route path="*" exact element={<Home />} />
+        <Route 
+          exact 
+          path="/" 
+          element={<Home color={"var(--green)"} />} />
+        <Route
+          exact
+          path="/contact"
+          element={<Contact color={"var(--cyan"} />}
+        />
+        <Route exact path="/about" element={<About color={"var(--violet)"} />} />
+        <Route
+          exact
+          path="/projects"
+          element={<Projects color={"var(--pink)"} />}
+        />
+        <Route path="*" element={<Home color={"var(--green)"} />} />
       </Routes>
     </Router>
   </React.StrictMode>,

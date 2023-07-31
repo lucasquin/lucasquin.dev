@@ -8,9 +8,20 @@ html {
 }
 
 * {
-  transition: font-size .03s ease;
+  transition: font-size .04s ease;
 }
 
 body {
   padding: 1rem
+}
+
+a {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+span {
+  font-weight: 400;
+  font-size: var(--size4);
+  color: var(--white);
 }

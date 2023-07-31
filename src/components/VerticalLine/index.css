@@ -1,7 +1,4 @@
-@import "../../styles/variables.css";
-
 .cssVerticalLine {
-  border-color: var(--unselected);
   border-width: 0.15rem;
   border-style: solid;
   margin: 0.7rem 0;

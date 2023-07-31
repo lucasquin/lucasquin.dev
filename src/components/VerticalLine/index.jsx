@@ -1,6 +1,7 @@
+import React from "react";
 import "./index.css";
 
-const VerticalLine = ({ color }) => {
+const VerticalLine = ({ color = "var(--unselected)" }) => {
   return (
     <hr
       className="cssVerticalLine"

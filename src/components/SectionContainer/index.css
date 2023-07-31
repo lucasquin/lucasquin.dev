@@ -1,0 +1,11 @@
+.cssSectionContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.cssSectionContainer section {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+}
