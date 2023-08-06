@@ -1,7 +1,7 @@
 import React from "react";
 import VerticalLine from "../VerticalLine";
 
-const SectionTitle = ({ color, title }) => {
+export default function SectionTitle({ color, title }) {
   return (
     <>
       <h3
@@ -16,6 +16,4 @@ const SectionTitle = ({ color, title }) => {
       <VerticalLine />
     </>
   );
-};
-
-export default SectionTitle;
+}

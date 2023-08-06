@@ -2,38 +2,32 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import VerticalLine from "../VerticalLine";
 import "./index.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { routes } from "../../routes";
 
-const Header = () => {
+export default function Header() {
   const { t } = useTranslation();
   const location = useLocation();
   const path = location.pathname;
-
-  const paths = {
-    home: "/",
-    projects: "/projects",
-    contact: "/contact",
-    about: "/about",
-  };
 
   return (
     <div className="cssHeader">
       <header>
         <h1
           style={
-            paths.home == path
+            routes.home == path
               ? {
                   color: "var(--green)",
                 }
-              : paths.projects == path
+              : routes.projects == path
               ? {
                   color: "var(--pink)",
                 }
-              : paths.contact == path
+              : routes.contact == path
               ? {
                   color: "var(--cyan)",
                 }
-              : paths.about == path
+              : routes.about == path
               ? {
                   color: "var(--violet)",
                 }
@@ -41,7 +35,7 @@ const Header = () => {
                   color: "var(--unselected)",
                 }
           }
-    className="transition"
+          className="transition"
         >
           <b>LUCASQUIN'S WEBSITE</b>
         </h1>
@@ -52,7 +46,7 @@ const Header = () => {
               <Link
                 to="/"
                 style={
-                  paths.home === path
+                  routes.home == path
                     ? {
                         color: "var(--green)",
                         fontWeight: "600",
@@ -65,7 +59,7 @@ const Header = () => {
               >
                 {t("Home")}
               </Link>
-              {paths.home === path ? (
+              {routes.home === path ? (
                 <VerticalLine color={"var(--green)"} />
               ) : null}
             </li>
@@ -73,7 +67,7 @@ const Header = () => {
               <Link
                 to="/projects"
                 style={
-                  paths.projects === path
+                  routes.projects === path
                     ? {
                         color: "var(--pink)",
                         fontWeight: "600",
@@ -86,7 +80,7 @@ const Header = () => {
               >
                 {t("Projects")}
               </Link>
-              {paths.projects === path ? (
+              {routes.projects === path ? (
                 <VerticalLine color={"var(--pink)"} />
               ) : null}
             </li>
@@ -94,7 +88,7 @@ const Header = () => {
               <Link
                 to="/contact"
                 style={
-                  paths.contact === path
+                  routes.contact === path
                     ? {
                         color: "var(--cyan)",
                         fontWeight: "600",
@@ -107,7 +101,7 @@ const Header = () => {
               >
                 {t("Contact")}
               </Link>
-              {paths.contact === path ? (
+              {routes.contact === path ? (
                 <VerticalLine color={"var(--cyan)"} />
               ) : null}
             </li>
@@ -115,7 +109,7 @@ const Header = () => {
               <Link
                 to="/about"
                 style={
-                  paths.about === path
+                  routes.about === path
                     ? {
                         color: "var(--violet)",
                         fontWeight: "600",
@@ -128,15 +122,14 @@ const Header = () => {
               >
                 {t("About")}
               </Link>
-              {paths.about === path ? (
+              {routes.about === path ? (
                 <VerticalLine color={"var(--violet)"} />
               ) : null}
             </li>
           </ul>
         </nav>
       </header>
+      <Outlet />
     </div>
   );
-};
-
-export default Header;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-const VerticalLine = ({ color = "var(--unselected)" }) => {
+export default function VerticalLine({ color = "var(--unselected)" }) {
   return (
     <hr
       className="cssVerticalLine"
@@ -10,6 +10,4 @@ const VerticalLine = ({ color = "var(--unselected)" }) => {
       }}
     />
   );
-};
-
-export default VerticalLine;
+}
