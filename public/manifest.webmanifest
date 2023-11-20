@@ -1,0 +1,13 @@
+{
+  "name": "LUCASQUIN'S WEBSITE",
+  "short_name": "LUCASQUIN'S WEBSITE",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Bem-vindo ao meu site pessoal, onde você pode explorar uma coleção de ideias e artigos que desenvolvi durante meu tempo livre. ",
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ]
+}

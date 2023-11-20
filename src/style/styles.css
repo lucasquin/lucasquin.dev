@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Fixedsys";
-  src: url("./FSEX300.ttf") format("truetype");
+  src: url("../../public/fonts/fixedsys.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
