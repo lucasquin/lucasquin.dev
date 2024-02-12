@@ -1,0 +1,20 @@
+# logs
+logs/
+.cache
+.DS_Store
+npm-debug.log
+
+# Coverage & Test
+coverage
+.nyc_output
+
+# Environment files
+.dot
+.env.*
+!.env.example
+
+# Editor and other files
+.vscode
+*.tgz
+.vercel
+.output
