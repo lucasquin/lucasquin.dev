@@ -3,18 +3,23 @@ package main
 import (
 	"log"
 
-	_ "github.com/go-sql-driver/mysql"
-
 	"github.com/lucasquin/lucasquin.dev/internal/database/mysql"
 	"github.com/lucasquin/lucasquin.dev/internal/routers"
 )
 
 func main() {
 	db, err := mysql.Connect()
+
+	sqlDB, err := db.DB()
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("failed to get database", err)
 	}
-	defer db.Close()
+	defer func() {
+		err := sqlDB.Close()
+		if err != nil {
+			log.Fatal("failed to close database")
+		}
+	}()
 
 	routers.SetupRouter(db)
 }

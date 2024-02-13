@@ -1,14 +1,13 @@
 package mysql
 
 import (
-	"database/sql"
-
-	_ "github.com/go-sql-driver/mysql"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
-func Connect() (*sql.DB, error) {
+func Connect() (*gorm.DB, error) {
 	dsn := "dev:masterkey@tcp(localhost:3306)/lucasquin?parseTime=true"
-	db, err := sql.Open("mysql", dsn)
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		return nil, err
 	}

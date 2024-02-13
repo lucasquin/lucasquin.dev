@@ -1,17 +1,17 @@
 package routers
 
 import (
-	"database/sql"
 	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/chi/v5"
+	"gorm.io/gorm"
 
 	"github.com/lucasquin/lucasquin.dev/internal/middlewares"
 )
 
-func SetupRouter(db *sql.DB) *chi.Mux {
+func SetupRouter(db *gorm.DB) *chi.Mux {
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)

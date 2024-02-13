@@ -1,11 +1,10 @@
 package routers
 
 import (
-	"database/sql"
-
 	"github.com/go-chi/chi/v5"
+	"gorm.io/gorm"
 )
 
-func RegisterRoutes(r *chi.Mux, db *sql.DB) {
+func RegisterRoutes(r *chi.Mux, db *gorm.DB) {
 	HealthRoutes(r, db)
 }
