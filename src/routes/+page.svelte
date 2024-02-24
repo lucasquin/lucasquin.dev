@@ -11,29 +11,34 @@
 
   const lists: LinkGroupProps = {
     title: "Lists",
+    row: false,
     links: [
       {
         label: "List of Awesome Youtube Channels",
         href: "/lists/list-of-awesome-youtube-channels",
-        target: "_self"
+        target: "_self",
+        underline: true
       },
       {
         label: "List of Awesome Talks",
         href: "/lists/list-of-awesome-talks",
-        target: "_self"
+        target: "_self",
+        underline: true
       }
     ]
   };
 
   const posts: LinkGroupProps = {
     title: "Posts",
+    row: false,
     links: [
       {
         label: "Implementing Simple Paxos Consensus Algorithm With Rust",
         href: "/posts/test",
         target: "_self",
-        date: "2024/02/24"
-      },
+        date: "2024/02/24",
+        underline: true
+      }
     ]
   };
 </script>

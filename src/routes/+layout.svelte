@@ -11,22 +11,26 @@
       {
         label: "ABOUT",
         href: "/about",
-        target: "_self"
+        target: "_self",
+        underline: false
       },
       {
         label: "CONTACT",
         href: "/contact",
-        target: "_self"
+        target: "_self",
+        underline: false
       },
       {
         label: "RSS",
         href: "/rss",
-        target: "_blank"
+        target: "_blank",
+        underline: false
       },
       {
         label: "$$$",
         href: "/sss",
-        target: "_self"
+        target: "_self",
+        underline: false
       }
     ]
   };
@@ -37,12 +41,14 @@
       {
         label: "Github",
         href: "https://www.github.com/lucasquin",
-        target: "_blank"
+        target: "_blank",
+        underline: true
       },
       {
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/lucasquin/",
-        target: "_blank"
+        target: "_blank",
+        underline: true
       }
     ]
   };

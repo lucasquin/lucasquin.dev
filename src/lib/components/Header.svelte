@@ -1,7 +1,13 @@
 <script lang="ts">
   import type HeaderProps from "$lib/interfaces/HeaderProps";
-
+  import LinkGroup from "./LinkGroup.svelte";
   export let headerProps: HeaderProps;
+
+  const props = {
+    links: headerProps.links,
+    row: true,
+  };
+
 </script>
 
 <center>
@@ -10,13 +16,7 @@
       <h1>{headerProps.title}</h1>
     </a>
     <nav>
-      <ul>
-        {#each headerProps.links as link}
-          <li>
-            <a href={link.href} target={link.target}> <p>{link.label}</p> </a>
-          </li>
-        {/each}
-      </ul>
+      <LinkGroup linkGroupProps={props} />
     </nav>
   </div>
 </center>
@@ -24,12 +24,5 @@
 <style>
   div {
     width: max-content;
-  }
-  ul {
-    display: flex;
-    justify-content: space-between;
-  }
-  a {
-    text-decoration: none;
   }
 </style>

@@ -98,7 +98,6 @@ main {
 a {
     color: inherit;
     cursor: pointer;
-    text-decoration: underline dotted rgba(0, 0, 0, .3);
 }
 
 a:hover {
