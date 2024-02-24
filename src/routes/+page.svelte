@@ -1,28 +1,43 @@
 <script lang="ts">
-  const lists: string[] = ["Item list", "Item list", "Item list", "Item list"];
-  const posts: string[] = ["Item post", "Item post", "Item post", "Item post"];
+  import LinkGroup from "$lib/components/LinkGroup.svelte";
+  import type LinkGroupProps from "$lib/interfaces/LinkGroupProps";
+
+  const lists: LinkGroupProps = {
+    title: "lists",
+    links: [
+      {
+        label: "List of Awesome Youtube Channels",
+        href: "/lists/list-of-awesome-youtube-channels",
+        target: "_self"
+      },
+      {
+        label: "List of Awesome Talks",
+        href: "/lists/list-of-awesome-talks",
+        target: "_self"
+      }
+    ]
+  };
+
+  const posts: LinkGroupProps = {
+    title: "posts",
+    links: [
+      {
+        label: "Post 1",
+        href: "/posts/post-1",
+        target: "_self"
+      },
+      {
+        label: "Post 2",
+        href: "/lists/post-2",
+        target: "_self"
+      }
+    ]
+  };
 </script>
 
 <section>
   <summary>whatever description</summary>
 </section>
-<section>
-  <h2>lists</h2>
-  <ul>
-    {#each lists as list, index}
-      <li>
-        <a href="https://www.google.com" target="_blank"> <p>{`${list} ${index}`}</p></a>
-      </li>
-    {/each}
-  </ul>
-</section>
-<section>
-  <h2>posts</h2>
-  <ul>
-    {#each posts as post, index}
-      <li>
-        <a href="https://www.google.com" target="_blank"> <p>{`${post} ${index}`}</p></a>
-      </li>
-    {/each}
-  </ul>
-</section>
+
+<LinkGroup linkGroupProps={lists} />
+<LinkGroup linkGroupProps={posts} />
