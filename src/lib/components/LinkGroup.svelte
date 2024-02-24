@@ -12,12 +12,27 @@
         <a href={link.href} target={link.target}>
           <p>
             {#if link.date}
-              {link.date}
+              {link.date}: <b>{link.label}</b>
+            {:else}
+              {link.label}
             {/if}
-            {link.label}
           </p></a
         >
       </li>
     {/each}
   </ul>
 </section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+  }
+
+  @media screen and (max-width: 425px) {
+    ul {
+      gap: var(--spacing-2x);
+    }
+  }
+</style>

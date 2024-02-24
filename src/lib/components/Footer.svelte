@@ -5,7 +5,6 @@
 </script>
 
 <footer>
-  <hr />
   <p>{footerProps.year}</p>
   <nav>
     <ul>
@@ -19,3 +18,17 @@
     </ul>
   </nav>
 </footer>
+
+<style>
+  footer {
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--spacing);
+  }
+
+  ul {
+    display: flex;
+    gap: var(--spacing-2x);
+  }
+</style>

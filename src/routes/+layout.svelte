@@ -48,17 +48,8 @@
   };
 </script>
 
-<Header {headerProps} />
 <main>
+  <Header {headerProps} />
   <slot />
 </main>
 <Footer {footerProps} />
-
-<style>
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-4x);
-  }
-</style>
