@@ -1,14 +1,23 @@
+<script lang="ts" context="module">
+  export interface ILinkGroup {
+    title?: string; // Previous title for link
+    row: boolean; // Render in row or column
+    links: Link[]; // Links with label
+  }
+</script>
+
 <script lang="ts">
-  import type LinkGroupProps from "$lib/interfaces/LinkGroupProps";
-  export let linkGroupProps: LinkGroupProps;
+  import type { Link } from "$lib/types/Links";
+
+  export let props: ILinkGroup;
 </script>
 
 <section>
-  {#if linkGroupProps.title && !linkGroupProps.row}
-    <h2>{linkGroupProps.title}</h2>
+  {#if props.title && !props.row}
+    <h3>{props.title}</h3>
   {/if}
-  <ul class={linkGroupProps.row ? "row" : ""}>
-    {#each linkGroupProps.links as link}
+  <ul class={props.row ? "row" : ""}>
+    {#each props.links as link}
       <li>
         <a href={link.href} target={link.target} class={link.underline ? "underline" : ""}>
           <p>
@@ -27,6 +36,10 @@
 <style>
   .underline {
     text-decoration: underline dotted rgba(0, 0, 0, 0.3);
+  }
+
+  li {
+    list-style-type: none;
   }
 
   .row {

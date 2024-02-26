@@ -1,22 +1,29 @@
+<script lang="ts" context="module">
+  export interface IHeader {
+    title: string;
+    links: Link[];
+  }
+</script>
+
 <script lang="ts">
-  import type HeaderProps from "$lib/interfaces/HeaderProps";
-  import LinkGroup from "./LinkGroup.svelte";
-  export let headerProps: HeaderProps;
+  import type { Link } from "$lib/types/Links";
+  import LinkGroup, { type ILinkGroup } from "./LinkGroup.svelte";
 
-  const props = {
-    links: headerProps.links,
-    row: true,
+  export let props: IHeader;
+
+  const linkGroup: ILinkGroup = {
+    links: props.links,
+    row: true
   };
-
 </script>
 
 <center>
   <div>
     <a href="/">
-      <h1>{headerProps.title}</h1>
+      <h1>{props.title}</h1>
     </a>
     <nav>
-      <LinkGroup linkGroupProps={props} />
+      <LinkGroup props={linkGroup} />
     </nav>
   </div>
 </center>
@@ -25,4 +32,5 @@
   div {
     width: max-content;
   }
+
 </style>

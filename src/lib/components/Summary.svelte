@@ -1,15 +1,14 @@
-<script lang="ts">
-  import type SummaryProps from "$lib/interfaces/SummaryProps";
+<script lang="ts" context="module">
+  export interface ISummary {
+    text: string;
+    ariaLabel: string;
+  }
+</script>
 
-  export let summaryProps: SummaryProps;
+<script lang="ts">
+  export let props: ISummary;
 </script>
 
 <section>
-  <summary aria-label={summaryProps.ariaLabel}>{summaryProps.text}</summary>
+  <summary aria-label={props.ariaLabel}>{props.text}</summary>
 </section>
-
-<style>
-  summary {
-    text-align: justify;
-  }
-</style>

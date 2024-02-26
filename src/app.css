@@ -14,8 +14,8 @@
 }
 
 :root {
-    --color-primary: rgba(0, 0, 0, 0);
-    --color-white: rgba(255, 255, 255, 255);
+    --background-color: #F5F5F0;
+    --background-code: rgba(0, 0, 0, .1);
 
     --font-size-2sm: 0.625rem;
     --font-size-sm: 0.75rem;
@@ -45,8 +45,7 @@ body {
     min-height: 100vh;
     font-size: 100%;
     line-height: 1;
-    list-style-type: none;
-    background: #F5F5F0;
+    background: var(--background-color);
 }
 
 body {
@@ -75,7 +74,15 @@ h2 {
     letter-spacing: 2px;
 }
 
+h3 {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    letter-spacing: 2px;
+}
+
 p,
+pre,
+code,
 li {
     font-size: var(--font-size-md);
     line-height: 1.25;
@@ -84,8 +91,20 @@ li {
     letter-spacing: 0.8px;
 }
 
+/* pre { */
+/*     background: rgba(0, 0, 0, 0.1); */
+/* } */
+/**/
+/* pre code { */
+/*     background: transparent; */
+/* } */
+/**/
+/* code { */
+/*     background: rgba(0, 0, 0, 0.1); */
+/* } */
+
 li {
-    list-style-type: none;
+    list-style-type: unset;
 }
 
 main {
@@ -102,4 +121,16 @@ a {
 
 a:hover {
     color: blue;
+}
+
+footer {
+    margin-top: var(--spacing-8x);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--spacing);
+}
+
+summary {
+    text-align: justify;
 }

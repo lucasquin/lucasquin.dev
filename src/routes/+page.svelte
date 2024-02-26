@@ -1,15 +1,15 @@
 <script lang="ts">
-  import LinkGroup from "$lib/components/LinkGroup.svelte";
-  import type LinkGroupProps from "$lib/interfaces/LinkGroupProps";
-  import Summary from "$lib/components/Summary.svelte";
-  import type SummaryProps from "$lib/interfaces/SummaryProps";
+  import LinkGroup, { type ILinkGroup } from "$lib/components/LinkGroup.svelte";
+  import Summary, { type ISummary } from "$lib/components/Summary.svelte";
 
-  const summaryProps: SummaryProps = {
+  export let data;
+
+  const summary: ISummary = {
     text: "This is my personal website, you can find here most of the code and ideas I came up with during my extra-professional time.",
     ariaLabel: "Summary of the information"
   };
 
-  const lists: LinkGroupProps = {
+  const lists: ILinkGroup = {
     title: "Lists",
     row: false,
     links: [
@@ -20,29 +20,29 @@
         underline: true
       },
       {
-        label: "List of Awesome Talks",
-        href: "/lists/list-of-awesome-talks",
+        label: "List of Awesome Podcasts",
+        href: "/lists/list-of-awesome-podcasts",
         target: "_self",
         underline: true
       }
     ]
   };
 
-  const posts: LinkGroupProps = {
+  const posts: ILinkGroup = {
     title: "Posts",
     row: false,
-    links: [
-      {
-        label: "Implementing Simple Paxos Consensus Algorithm With Rust",
-        href: "/posts/test",
+    links: data.posts.map((post) => {
+      return {
+        label: post.title,
+        date: post.date,
+        href: post.url,
         target: "_self",
-        date: "2024/02/24",
         underline: true
-      }
-    ]
+      };
+    })
   };
 </script>
 
-<Summary {summaryProps} />
-<LinkGroup linkGroupProps={lists} />
-<LinkGroup linkGroupProps={posts} />
+<Summary props={summary} />
+<LinkGroup props={lists} />
+<LinkGroup props={posts} />

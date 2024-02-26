@@ -1,11 +1,9 @@
 <script lang="ts">
-  import Footer from "$lib/components/Footer.svelte";
-  import Header from "$lib/components/Header.svelte";
-  import type FooterProps from "$lib/interfaces/FooterProps";
-  import type HeaderProps from "$lib/interfaces/HeaderProps";
+  import Footer, { type IFooter } from "$lib/components/Footer.svelte";
+  import Header, { type IHeader } from "$lib/components/Header.svelte";
   import "../app.css";
 
-  const headerProps: HeaderProps = {
+  const header: IHeader = {
     title: "LUCASQUIN'S WEBSITE",
     links: [
       {
@@ -35,7 +33,7 @@
     ]
   };
 
-  const footerProps: FooterProps = {
+  const footer: IFooter = {
     year: new Date().getFullYear().toString(),
     links: [
       {
@@ -55,7 +53,7 @@
 </script>
 
 <main>
-  <Header {headerProps} />
+  <Header props={header} />
   <slot />
 </main>
-<Footer {footerProps} />
+<Footer props={footer} />
