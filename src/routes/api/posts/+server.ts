@@ -10,7 +10,7 @@ async function getPosts() {
     const url = path.split("/").at(-1)?.replace(".md", "")
 
     if (file && typeof file === "object" && "metadata" in file && url) {
-      const metadata = file.metadata as Omit<Post, "slug">;
+      const metadata = file.metadata as Omit<Post, "url">;
       const post = { ...metadata, url: url } satisfies Post;
 
       post.published && posts.push(post);
