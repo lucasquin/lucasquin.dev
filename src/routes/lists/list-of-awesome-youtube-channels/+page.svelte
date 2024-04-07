@@ -5,10 +5,22 @@
 
   const summary: ISummary = {
     text: "List of My Favorite YouTube Programming Channels in alphabetical order",
-    ariaLabel: "Summary of the information"
+    ariaLabel: "Summary of favorite YouTube programming channels"
   };
 
   const channels: Link[] = [
+    {
+      label: "mano deyvin",
+      href: "https://www.youtube.com/@manodeyvin",
+      target: "_blank",
+      underline: true
+    },
+    {
+      label: "Pedro Pessoa",
+      href: "https://www.youtube.com/@phenpessoa",
+      target: "_blank",
+      underline: true
+    },
     {
       label: "Fabio Akita",
       href: "https://www.youtube.com/@Akitando",

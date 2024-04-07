@@ -52,6 +52,10 @@
   };
 </script>
 
+<svelte:head>
+  <title>{header.title}</title>
+</svelte:head>
+
 <main>
   <Header props={header} />
   <slot />
