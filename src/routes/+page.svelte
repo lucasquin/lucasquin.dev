@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import Section from '$lib/Section.svelte';
+
+	const title: string = 'lucasquin.dev';
+
+	const description: string = 'Welcome to my personal website';
+	const keywords: string = 'developer, web development, portfolio';
+</script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta name="keywords" content={keywords} />
+</svelte:head>
+
+<Section subtitle={'hello'} />
