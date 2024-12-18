@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Section from '$lib/Section.svelte';
+	import Topics from '$lib/Topics.svelte';
 
 	const title: string = 'lucasquin.dev';
 
@@ -13,4 +14,7 @@
 	<meta name="keywords" content={keywords} />
 </svelte:head>
 
-<Section subtitle={'hello'} />
+<Section subtitle={'Hello'} />
+<Section subtitle={'The Art of Programming'} />
+
+<Topics />
