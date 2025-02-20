@@ -10,24 +10,18 @@
 		<nav aria-label="Footer navigation">
 			<ul class="flex gap-4">
 				<li>
-					<a href="/" class="hover:underline" aria-label="Go to Agora section"
-						>/{$t('common.home')}</a
-					>
+					<a href="/" class="hover:text-blue-600 hover:underline" aria-label="Go to home">/{$t('common.home')}</a>
 				</li>
 				<li>
-					<a href="/now" class="hover:underline" aria-label="Go to Agora section"
-						>/{$t('common.now')}</a
-					>
+					<a href="/now" class="hover:text-blue-600 hover:underline" aria-label="Go to now section">/{$t('common.now')}</a>
 				</li>
 				<li>
-					<a href="/lists" class="hover:underline" aria-label="Go to Lists section"
-						>/{$t('common.lists')}</a
-					>
+					<a href="/lists" class="hover:text-blue-600 hover:underline" aria-label="Go to lists section">/{$t('common.lists')}</a>
 				</li>
 				<li>
 					<a
 						href="https://x.com/lucaslquin"
-						class="hover:underline"
+						class="hover:text-blue-600 hover:underline"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Visit Twitter profile">/twitter</a
@@ -36,7 +30,7 @@
 				<li>
 					<a
 						href="https://github.com/lucasquin"
-						class="hover:underline"
+						class=" hover:text-blue-600 hover:underline"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Visit GitHub profile">/github</a

@@ -7,6 +7,9 @@ const translations = {
 			Lists: 'Lists',
 			learnMore: 'Learn More'
 		},
+		tag: {
+			article: 'article'
+		},
 		welcome: {
 			hello: 'Hello',
 			description: 'I am Lucas. Programmer, coffee enthusiast and a few other things. I love sleeping in when I can. I buy more books than I read, and I put sugar in my coffee. Nice to have you here.'
@@ -22,10 +25,14 @@ const translations = {
 			}
 		},
 		lists: {
-			youtubeChannels: {
-				title: 'Awesome Youtube Channels',
-				description: 'YouTube channels that I often watch and recommend.',
-				listTitle: 'List of Awesome Youtube Channels'
+			youtube: {
+				title: 'List of awesome Youtube channels'
+			},
+			article: {
+				title: 'List of best articles that I read'
+			},
+			book: {
+				title: 'List of books that I read'
 			}
 		}
 	},
@@ -36,6 +43,9 @@ const translations = {
 			lists: 'listas',
 			Lists: 'Listas',
 			learnMore: 'Saiba Mais'
+		},
+		tag: {
+			article: 'artigo'
 		},
 		welcome: {
 			hello: 'Olá',
@@ -52,10 +62,14 @@ const translations = {
 			}
 		},
 		lists: {
-			youtubeChannels: {
-				title: 'Canais Incríveis do Youtube',
-				description: 'Canais do Youtube que recomendo',
-				listTitle: 'List of Awesome Youtube Channels'
+			youtube: {
+				title: 'Lista de canais incríveis do Youtube'
+			},
+			article: {
+				title: 'Lista dos melhores artigos que já li'
+			},
+			book: {
+				title: 'Lista de livros que já li'
 			}
 		}
 	}

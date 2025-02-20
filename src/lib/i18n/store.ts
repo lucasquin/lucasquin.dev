@@ -1,10 +1,6 @@
 import { derived, writable } from 'svelte/store';
 import type { Writable, Readable } from 'svelte/store';
-import translations, {
-	type LocaleCode,
-	type TranslationKey,
-	type TranslationVars
-} from './translations';
+import translations, { type LocaleCode, type TranslationKey, type TranslationVars } from './translations';
 
 type TranslationFunction = (key: TranslationKey, vars?: TranslationVars) => string;
 
