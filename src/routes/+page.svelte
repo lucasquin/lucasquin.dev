@@ -6,6 +6,14 @@
 
 	const description: string = 'Welcome to my personal website';
 	const keywords: string = 'developer, web development, portfolio';
+
+	const topics = [
+		{
+			title: 'articles.loadBalancers.title',
+			description: 'articles.loadBalancers.description',
+			href: '/load-balancers'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -14,7 +22,7 @@
 	<meta name="keywords" content={keywords} />
 </svelte:head>
 
-<Section subtitle={'Hello'} />
-<Section subtitle={'The Art of Programming'} />
+<Section subtitle={'welcome.hello'} text={'welcome.description'} />
+<Section subtitle={'articles.programming.title'} text={'articles.programming.description'} />
 
-<Topics />
+<Topics {topics} />

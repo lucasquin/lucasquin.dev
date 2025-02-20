@@ -1,7 +1,10 @@
 import { derived, writable } from 'svelte/store';
 import type { Writable, Readable } from 'svelte/store';
-import translations from './translations';
-import type { LocaleCode, TranslationKey, TranslationVars } from './translations';
+import translations, {
+	type LocaleCode,
+	type TranslationKey,
+	type TranslationVars
+} from './translations';
 
 type TranslationFunction = (key: TranslationKey, vars?: TranslationVars) => string;
 
@@ -18,10 +21,14 @@ function translate(locale: LocaleCode, key: TranslationKey, vars: TranslationVar
 		throw new Error(`No translation for key "${key}"`);
 	}
 
-	const text = translations[locale]?.[key];
+	const keyParts = key.split('.');
 
-	if (!text) {
-		throw new Error(`No translation found for ${locale}.${key}`);
+	let text: any = translations[locale];
+	for (const part of keyParts) {
+		text = text[part];
+		if (text === undefined) {
+			throw new Error(`No translation found for ${locale}.${key}`);
+		}
 	}
 
 	return Object.keys(vars).reduce((acc, k) => {

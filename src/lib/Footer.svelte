@@ -10,14 +10,18 @@
 		<nav aria-label="Footer navigation">
 			<ul class="flex gap-4">
 				<li>
-					<a href="/" class="hover:underline" aria-label="Go to Agora section">/{$t('home')}</a>
+					<a href="/" class="hover:underline" aria-label="Go to Agora section"
+						>/{$t('common.home')}</a
+					>
 				</li>
 				<li>
-					<a href="/now" class="hover:underline" aria-label="Go to Agora section">/{$t('now')}</a>
+					<a href="/now" class="hover:underline" aria-label="Go to Agora section"
+						>/{$t('common.now')}</a
+					>
 				</li>
 				<li>
 					<a href="/lists" class="hover:underline" aria-label="Go to Lists section"
-						>/{$t('lists')}</a
+						>/{$t('common.lists')}</a
 					>
 				</li>
 				<li>

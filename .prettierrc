@@ -16,6 +16,14 @@
 			"options": {
 				"parser": "svelte"
 			}
+		},
+		{
+			"files": "translations.ts",
+			"options": {
+				"parser": "typescript",
+				"printWidth": 10000,
+				"quoteProps": "preserve"
+			}
 		}
 	]
 }
