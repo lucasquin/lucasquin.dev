@@ -1,13 +1,13 @@
-import type { HeadType, CardType } from '../app';
+import type { ICard, IHead, ISection } from '$lib/types';
 
 export function load() {
-	const head: HeadType = {
-		title: 'lucasquin.dev',
+	const head: IHead = {
+		title: 'common.lucasquinDev',
 		description: 'Welcome to my personal website',
 		keywords: 'developer, web development, portfolio'
 	};
 
-	const cards: CardType[] = [
+	const cards: ICard[] = [
 		{
 			title: 'articles.loadBalancers.title',
 			description: 'articles.loadBalancers.description',
@@ -16,8 +16,20 @@ export function load() {
 		}
 	];
 
+	const sections: ISection[] = [
+		{
+			subtitle: 'welcome.hello',
+			text: 'welcome.description'
+		},
+		{
+			subtitle: 'articles.programming.title',
+			text: 'articles.programming.description'
+		}
+	];
+
 	return {
 		head,
-		cards
+		cards,
+		sections
 	};
 }

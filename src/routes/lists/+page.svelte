@@ -1,17 +1,12 @@
 <script lang="ts">
-	import List from '$lib/List.svelte';
-	import Section from '$lib/Section.svelte';
-	import type { PageData } from '../$types';
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import ListsComponent from '$lib/components/ListsComponent.svelte';
+	import SectionComponent from '$lib/components/SectionComponent.svelte';
+	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
-<svelte:head>
-	<title>{data.head.title}</title>
-	<meta name="description" content={data.head.description} />
-	<meta name="keywords" content={data.head.keywords} />
-</svelte:head>
-
-<Section subtitle={'common.Lists'} />
-
-<List list={data.list} />
+<HeadComponent head={data.head} />
+<SectionComponent section={data.section} />
+<ListsComponent lists={data.lists} />

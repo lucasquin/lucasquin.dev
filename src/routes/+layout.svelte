@@ -1,22 +1,19 @@
 <script lang="ts">
 	import '../app.css';
-	import Header from '$lib/Header.svelte';
-	import Footer from '$lib/Footer.svelte';
-	let { children } = $props();
-	let title: string = 'lucasquin.dev';
+	import FooterComponent from '$lib/components/FooterComponent.svelte';
+	import HeaderComponent from '$lib/components/HeaderComponent.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	export let children: () => any;
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content="Personal website of lucasquin" />
-</svelte:head>
-
 <div class="flex min-h-screen flex-col">
-	<Header {title} />
+	<HeaderComponent header={data.header} />
 
 	<main class="flex-grow">
 		{@render children()}
 	</main>
 
-	<Footer />
+	<FooterComponent />
 </div>

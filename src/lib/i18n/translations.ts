@@ -5,7 +5,8 @@ const translations = {
 			now: 'now',
 			lists: 'lists',
 			Lists: 'Lists',
-			learnMore: 'Learn More'
+			learnMore: 'Learn More',
+			lucasquinDev: 'lucasquin.dev'
 		},
 		tag: {
 			article: 'article'
@@ -42,7 +43,8 @@ const translations = {
 			now: 'agora',
 			lists: 'listas',
 			Lists: 'Listas',
-			learnMore: 'Saiba Mais'
+			learnMore: 'Saiba Mais',
+			lucasquinDev: 'lucasquin.dev'
 		},
 		tag: {
 			article: 'artigo'

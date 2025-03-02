@@ -2,15 +2,19 @@ import { derived, writable } from 'svelte/store';
 import type { Writable, Readable } from 'svelte/store';
 import translations, { type LocaleCode, type TranslationKey, type TranslationVars } from './translations';
 
-type TranslationFunction = (key: TranslationKey, vars?: TranslationVars) => string;
+type TranslationFunction = (key: TranslationKey, translate?: boolean, vars?: TranslationVars) => string;
 
 export const locale: Writable<LocaleCode> = writable('en');
 
 export const locales: LocaleCode[] = Object.keys(translations) as LocaleCode[];
 
-function translate(locale: LocaleCode, key: TranslationKey, vars: TranslationVars = {}): string {
+function translate(locale: LocaleCode, key: TranslationKey, shouldTranslate: boolean = true, vars: TranslationVars = {}): string {
 	if (!key) {
 		throw new Error('No key provided to $t()');
+	}
+
+	if (!shouldTranslate) {
+		return key;
 	}
 
 	if (!locale) {
@@ -36,6 +40,6 @@ function translate(locale: LocaleCode, key: TranslationKey, vars: TranslationVar
 export const t: Readable<TranslationFunction> = derived(
 	locale,
 	($locale) =>
-		(key: TranslationKey, vars: TranslationVars = {}) =>
-			translate($locale, key, vars)
+		(key: TranslationKey, shouldTranslate: boolean = true, vars: TranslationVars = {}) =>
+			translate($locale, key, shouldTranslate, vars)
 );

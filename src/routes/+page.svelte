@@ -1,18 +1,16 @@
 <script lang="ts">
-	import Cards from '$lib/Cards.svelte';
-	import Section from '$lib/Section.svelte';
+	import CardsComponent from '$lib/components/CardsComponent.svelte';
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import SectionComponent from '$lib/components/SectionComponent.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
-<svelte:head>
-	<title>{data.head.title}</title>
-	<meta name="description" content={data.head.description} />
-	<meta name="keywords" content={data.head.keywords} />
-</svelte:head>
+<HeadComponent head={data.head} />
 
-<Section subtitle={'welcome.hello'} text={'welcome.description'} />
-<Section subtitle={'articles.programming.title'} text={'articles.programming.description'} />
+{#each data.sections as section}
+	<SectionComponent {section} />
+{/each}
 
-<Cards cards={data.cards} />
+<CardsComponent cards={data.cards} />
